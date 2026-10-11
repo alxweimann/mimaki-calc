@@ -2,6 +2,40 @@
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MIMAKI CALC</title>
 <style>
 *{box-sizing:border-box}body{margin:0;padding:16px;background:#777b75;font-family:Arial,sans-serif;color:#262823}.mc{max-width:760px;margin:auto;background:#b9b9b0;border:1px solid #85877f;border-radius:14px;padding:16px;box-shadow:inset 0 1px #eee,0 9px 30px #3336}.top{display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;letter-spacing:.14em}.model,.status{font:11px 'Courier New',monospace;color:#555}.badge{background:#343734;color:white;padding:5px 8px;font:10px monospace}.lcd{margin:14px 0;background:#9eaa83;border:3px inset #727765;border-radius:5px;padding:14px;font-family:'Courier New',monospace;color:#172116}.lcd .price{font-size:clamp(29px,7vw,48px);font-weight:900;text-align:right}.nestlcd{margin-top:0;padding-top:0;border-top:0;background:#9eaa83;border:3px inset #727765;border-radius:5px;padding:12px;color:#172116}.nestpanel{margin-top:11px}.nesthead{display:flex;justify-content:space-between;font:10px monospace;margin-bottom:6px}.nestsvg{width:100%;height:auto;max-height:190px;display:block}.nestfoot{font:10px monospace;margin-top:5px}.lcdsub{border-top:1px solid #55654d;margin-top:9px;padding-top:8px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px}.plate{background:#c7c7bf;border:1px solid #85877f;border-radius:7px;padding:12px;margin-top:11px}.title{font-size:11px;font-weight:900;letter-spacing:.12em;color:#50524a;margin-bottom:10px}.inputs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.field{min-width:0}.field label{display:block;font-size:10px;font-weight:900;margin-bottom:5px}.field input,.field select{width:100%;min-height:42px;background:#efefe9;border:2px inset #a4a49d;border-radius:3px;padding:7px;font:700 15px 'Courier New',monospace}.field small{display:block;color:#555;margin-top:3px}.wide{margin-top:10px}.keys{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.key,.btn{cursor:pointer;background:#d5d5cd;border:1px solid #777970;border-bottom:4px solid #696b64;border-radius:5px;min-height:44px;font-weight:900}.key{font-size:10px}.key small{display:block;font-size:9px;margin-top:4px}.key.on{background:#6f7771;color:white;border-bottom-width:1px}.extras,.settings{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.calc{font:12px/1.8 'Courier New',monospace;overflow-wrap:anywhere}.service summary{cursor:pointer;font-weight:900;letter-spacing:.1em;font-size:12px}.full{grid-column:1/-1}.box{background:#bdbdb5;border:1px solid #999b93;padding:10px;border-radius:5px}.dbrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) 34px;gap:6px;margin-top:12px;padding-bottom:12px;border-bottom:1px solid #999b93;align-items:center}.dbrow input{min-width:0;width:100%;background:#eee;border:2px inset #aaa;padding:7px;font:12px monospace}.dbrow input[data-f="name"]{grid-column:1/4}.dbmetric{grid-row:2;min-width:0;font:700 9px Arial,sans-serif;letter-spacing:.04em;color:#555;display:block}.dbmetric input{display:block;margin-top:5px}.dbwidth{grid-column:1}.dblength{grid-column:2}.dbprice{grid-column:3}.dbrow button.del{grid-column:4;grid-row:1;width:32px;height:32px;min-height:0;padding:0;display:grid;place-items:center;cursor:pointer;background:#c4c5bd;color:#555b55;border:1px solid #8c8f87;border-radius:5px}.dbrow button.del svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.btn{padding:6px 12px;margin:8px 5px 0 0;min-height:35px;font-size:10px}.save{background:#6f7771;color:white}.inkrow{display:grid;grid-template-columns:28px 1fr 1fr 1fr;gap:6px;align-items:end;margin-top:7px}.inkrow b{padding-bottom:12px}.status{margin-top:10px}.hint{font:10px 'Courier New',monospace;color:#555;margin-top:5px}@media(max-width:540px){body{padding:8px}.mc{padding:10px}.inputs{grid-template-columns:1fr 1fr}.inputs .field:last-child{grid-column:1/-1}.keys,.extras,.settings{grid-template-columns:1fr 1fr}.dbrow{grid-template-columns:repeat(3,minmax(0,1fr)) 34px}.dbrow input:first-child{grid-column:1/4}.inkrow{grid-template-columns:25px 1fr 1fr}.inkrow span{grid-column:2/-1}}
+
+/* BLACK EDITION — visual skin only; calculation and persistence untouched */
+:root{color-scheme:dark}
+body{background:#4c4d4b;color:#e4e5df}
+.mc{max-width:760px;background:linear-gradient(145deg,#303133 0%,#1e1f21 42%,#171819 100%);border:1px solid #48494b;border-radius:23px;padding:23px;box-shadow:inset 1px 2px 2px #ffffff29,inset -2px -3px 7px #0008,0 14px 34px #0008}
+.brand{color:#f5f5f0;font-size:clamp(19px,4vw,27px);letter-spacing:.12em}
+.model{color:#a5a7a3;letter-spacing:.1em;margin-top:4px}
+.badge{background:#242c27;border-radius:50%;width:46px;height:46px;display:grid;place-items:center;color:#b5c4ad;border:1px solid #536057;box-shadow:inset 1px 2px 3px #000a;font-size:9px}
+.lcd,.nestlcd{background:linear-gradient(160deg,#aeb9a4,#919f8e);border:8px solid #27292a;outline:1px solid #44494a;border-radius:13px;color:#202e28;box-shadow:inset 0 3px 9px #33433355,0 5px 10px #0007}
+.lcd{margin:23px 0;padding:20px 16px}
+.lcd .price{font-family:'Courier New',monospace;font-weight:700;letter-spacing:.025em}
+.lcdsub{border-color:#63725f}
+.plate{background:linear-gradient(155deg,#2c2d2e,#242526);border:1px solid #48494a;border-radius:11px;padding:17px;margin-top:17px;box-shadow:inset 0 1px #ffffff0b}
+.title{color:#c4c6bf;letter-spacing:.17em}
+.field label{color:#b7bab4;letter-spacing:.06em}
+.field input,.field select,.dbrow input{background:#d8dad2;color:#1a1e1b;border:2px inset #5c605b;border-radius:5px;min-height:43px}
+.field small,.hint,.status{color:#aeb3aa}
+.nestpanel .nestlcd{padding:15px;border-width:6px}
+.nesthead,.nestfoot{color:#223029}
+.keys{gap:13px;margin:24px 4px}
+.key{min-height:78px;border-radius:999px;border:1px solid #4c5050;border-bottom:5px solid #070909;background:radial-gradient(circle at 31% 22%,#555b5b,#2c3031 48%,#121617 85%);box-shadow:inset 2px 2px 3px #ffffff3b,0 5px 8px #0009;color:#f4f4ef;font-size:11px;letter-spacing:.025em;text-shadow:0 1px 1px #000;transition:transform .1s}
+.key small{color:#b0b5b0}
+.key.on{background:radial-gradient(circle at 30% 20%,#768779,#35483e 65%,#18241e);border-bottom-width:2px;transform:translateY(3px)}
+.key.on small{color:#d5f2c7}
+.calc{color:#cdd0c9}
+.service summary{color:#dedfd8}
+.box{background:#262829;border-color:#494b49;border-radius:9px}
+.dbrow{border-color:#474a48}
+.dbmetric{color:#b6bcb3}
+.dbrow button.del{background:linear-gradient(#45494a,#2c3030);color:#d3d8d0;border:1px solid #626866;box-shadow:inset 0 1px #ffffff20}
+.btn{background:linear-gradient(#515658,#333738);color:#e6e9e3;border:1px solid #6b706d;border-bottom:4px solid #111514;border-radius:12px}
+.btn.save,.save{background:linear-gradient(#637366,#384c40);color:#f1f6ef}
+.inkrow b{color:#e4e8e1}
+@media(max-width:540px){body{padding:8px}.mc{padding:15px;border-radius:20px}.keys{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;margin:22px 18px}.key{min-height:72px}.lcd{padding:16px 12px;border-width:7px}.nestpanel .nestlcd{padding:10px}}
 </style></head><body><main class="mc">
 <div class="top"><div><div class="brand">MIMAKI CALC</div><div class="model">CJV150-130 // COST COMPUTER</div></div><span class="badge">READY</span></div>
 <div class="lcd"><div style="font-size:11px;letter-spacing:.15em">VK NETTO</div><div id="price" class="price">0,00 EUR</div><div class="lcdsub"><span id="perpiece"></span><span id="lfm"></span></div></div>
