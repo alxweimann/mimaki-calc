@@ -46,6 +46,15 @@ body{background:#4c4d4b;color:#e4e5df}
 .key.on{border-bottom-width:3px;transform:translateY(2px);outline:2px solid #b1cf9c;outline-offset:2px;box-shadow:inset 1px 2px 4px #fff4,0 0 13px #9ecb8370}
 .key.on small{color:#e5f6d9}
 @media(max-width:540px){.keys{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:23px 0 27px}.key{width:100%;max-width:92px;min-height:0;padding:5px 2px;font-size:clamp(7px,2.1vw,10px)}.key small{font-size:8px;margin-top:4px}}
+
+/* MATTE BRAUN KEY REFINEMENT */
+.keys{gap:12px;margin:24px 8px 28px}
+.key{max-width:96px;background:#292e2e;border:1px solid #161a1a;border-bottom:2px solid #111515;box-shadow:inset 0 1px 1px #ffffff18,0 2px 3px #0005;text-shadow:none;color:#e5e6e1;transition:transform .1s,outline-color .1s}
+.key[data-key="lam"]{background:#345044}
+.key[data-key="eye"]{background:#674c42}
+.key small{color:#c3c9c2;text-shadow:none}
+.key.on{background:#516a55;border-bottom-width:1px;outline:1px solid #8aa58a;outline-offset:2px;box-shadow:inset 0 1px 1px #ffffff22,0 1px 2px #0005}
+@media(max-width:540px){.keys{gap:12px;margin:24px 7px 27px}.key{max-width:88px}}
 </style></head><body><main class="mc">
 <div class="top"><div><div class="brand">MIMAKI CALC</div><div class="model">CJV150-130 // COST COMPUTER</div></div><span class="badge">READY</span></div>
 <div class="lcd"><div style="font-size:11px;letter-spacing:.15em">VK NETTO</div><div id="price" class="price">0,00 EUR</div><div class="lcdsub"><span id="perpiece"></span><span id="lfm"></span></div></div>
