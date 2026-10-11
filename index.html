@@ -36,6 +36,16 @@ body{background:#4c4d4b;color:#e4e5df}
 .btn.save,.save{background:linear-gradient(#637366,#384c40);color:#f1f6ef}
 .inkrow b{color:#e4e8e1}
 @media(max-width:540px){body{padding:8px}.mc{padding:15px;border-radius:20px}.keys{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;margin:22px 18px}.key{min-height:72px}.lcd{padding:16px 12px;border-width:7px}.nestpanel .nestlcd{padding:10px}}
+
+/* BRAUN ROUND KEYBOARD refinement */
+.keys{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:24px 0 30px;justify-items:center;align-items:start}
+.key{width:100%;max-width:116px;aspect-ratio:1/1;min-height:0;padding:8px 3px;border-radius:50%;font:700 clamp(8px,1.8vw,11px)/1.15 Arial,sans-serif;letter-spacing:0;color:#f4f3eb;text-shadow:0 1px 2px #000b;overflow-wrap:anywhere;background:radial-gradient(circle at 30% 22%,#626869 0%,#353a3a 35%,#171a1b 78%,#0a0d0d 100%);border:1px solid #101414;border-bottom:5px solid #070909;box-shadow:inset 2px 3px 3px #ffffff42,inset -3px -4px 6px #0007,0 5px 7px #000a}
+.key[data-key="lam"]{background:radial-gradient(circle at 30% 22%,#779182 0%,#3b594b 34%,#1a3026 75%,#0d1b15 100%)}
+.key[data-key="eye"]{background:radial-gradient(circle at 30% 22%,#a17b6c 0%,#694a3d 34%,#35231e 75%,#1d1412 100%)}
+.key small{display:block;font-size:9px;font-weight:600;letter-spacing:.08em;margin-top:6px;color:#d1d2ca}
+.key.on{border-bottom-width:3px;transform:translateY(2px);outline:2px solid #b1cf9c;outline-offset:2px;box-shadow:inset 1px 2px 4px #fff4,0 0 13px #9ecb8370}
+.key.on small{color:#e5f6d9}
+@media(max-width:540px){.keys{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:23px 0 27px}.key{width:100%;max-width:92px;min-height:0;padding:5px 2px;font-size:clamp(7px,2.1vw,10px)}.key small{font-size:8px;margin-top:4px}}
 </style></head><body><main class="mc">
 <div class="top"><div><div class="brand">MIMAKI CALC</div><div class="model">CJV150-130 // COST COMPUTER</div></div><span class="badge">READY</span></div>
 <div class="lcd"><div style="font-size:11px;letter-spacing:.15em">VK NETTO</div><div id="price" class="price">0,00 EUR</div><div class="lcdsub"><span id="perpiece"></span><span id="lfm"></span></div></div>
