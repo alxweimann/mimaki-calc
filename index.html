@@ -33,7 +33,7 @@ function drawNest(p,m,qty,gap,cut){
  const rect=(x,y,w,h,fill,stroke='#43533d')=>'<rect x="'+x.toFixed(2)+'" y="'+y.toFixed(2)+'" width="'+Math.max(0,w).toFixed(2)+'" height="'+Math.max(0,h).toFixed(2)+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="1"/>';
  let out='<svg class="nestsvg" viewBox="0 0 '+W+' '+(H+25)+'" role="img" aria-label="Schematische Nutzenanordnung auf Druckbahn">';
  out+=rect(pad,12,inner,H-12,'#a9b798','#354332');
- for(let r=0;r<show;r++){let count=Math.min(p.across,qty-r*p.across);for(let j=0;j<count;j++){let x=pad+(n('margin')+j*(p.pieceW+gap))*scale,y=17+r*step*sy,rw=p.pieceW*scale,rh=p.pieceH*sy;out+=rect(x,y,rw,rh,'#cbd7b8');if(rw>30&&rh>17)out+='<text x="'+(x+rw/2)+'" y="'+(y+rh/2+3)+'" text-anchor="middle" font-size="10" fill="#344332">'+(r*p.across+j+1)+'</text>'}}
+ for(let r=0;r<show;r++){let count=Math.min(p.across,qty-r*p.across);for(let j=0;j<count;j++){let rowWidth=count*p.pieceW+Math.max(0,count-1)*gap,x=pad+((m.width-rowWidth)/2+j*(p.pieceW+gap))*scale,y=17+r*step*sy,rw=p.pieceW*scale,rh=p.pieceH*sy;out+=rect(x,y,rw,rh,'#cbd7b8');if(rw>30&&rh>17)out+='<text x="'+(x+rw/2)+'" y="'+(y+rh/2+3)+'" text-anchor="middle" font-size="10" fill="#344332">'+(r*p.across+j+1)+'</text>'}}
  out+='<text x="'+(W/2)+'" y="'+(H+13)+'" text-anchor="middle" font-size="11" fill="#253420">ROLLE '+m.width+' MM ↓ VORSCHUB</text></svg>';
  $('#nestpreview').innerHTML=out;$('#nestorientation').textContent=p.rot?'90° ROTIERT':'0° NORMAL';
  $('#nestdetail').textContent=p.across+' NEBENEINANDER × '+p.rows+' REIHEN · '+f(p.len/1000)+' LFM · '+f(gap)+' MM ABSTAND · '+f(cut)+' MM ZWISCHENSCHNITT'+(p.rows>show?' · VORSCHAU: '+show+' REIHEN':'');
