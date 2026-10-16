@@ -92,7 +92,11 @@ function drawNest(p,m,qty,gap,cut,bleed){
  let out='<svg class="nestsvg" viewBox="0 0 '+W+' '+(H+25)+'" role="img" aria-label="Maßstabsgetreue Nutzenanordnung auf Druckbahn">';
  out+=rect(pad,12,inner,shownHeight*scale+10,'#a9b798','#354332');
  for(let r=0;r<show;r++){let count=Math.min(p.across,qty-r*p.across);for(let j=0;j<count;j++){let fullRowWidth=p.across*p.pieceW+Math.max(0,p.across-1)*gap,x=pad+((m.width-fullRowWidth)/2+j*(p.pieceW+gap))*scale,y=17+r*step*scale,rw=p.pieceW*scale,rh=p.pieceH*scale;out+=rect(x,y,rw,rh,'#cbd7b8');let inset=bleed*scale;if(inset>0&&rw>2*inset&&rh>2*inset)out+='<rect x="'+(x+inset).toFixed(2)+'" y="'+(y+inset).toFixed(2)+'" width="'+(rw-2*inset).toFixed(2)+'" height="'+(rh-2*inset).toFixed(2)+'" fill="none" stroke="#344332" stroke-width="1" stroke-dasharray="4 3"/>';if(rw>30&&rh>17)out+='<text x="'+(x+rw/2)+'" y="'+(y+rh/2+3)+'" text-anchor="middle" font-size="10" fill="#344332">'+(r*p.across+j+1)+'</text>'}}
- if(gap>0&&p.across>1){const full=p.across*p.pieceW+(p.across-1)*gap,first=pad+(m.width-full)/2*scale,mid=first+p.pieceW*scale+gap*scale/2;out+='<line x1="'+mid.toFixed(2)+'" y1="12" x2="'+mid.toFixed(2)+'" y2="25" stroke="#253420" stroke-width="1.5"/>';out+='<text x="'+mid.toFixed(2)+'" y="9" text-anchor="middle" font-size="10" fill="#253420">'+f(gap)+' mm</text>';}
+ if(gap>0&&p.across>1){const full=p.across*p.pieceW+(p.across-1)*gap,first=pad+(m.width-full)/2*scale,mid=first+p.pieceW*scale+gap*scale/2;
+ out+='<rect x="'+(mid-53).toFixed(2)+'" y="1" width="106" height="25" rx="5" fill="#263d32" stroke="#e1e9d4" stroke-width="1"/>';
+ out+='<text x="'+mid.toFixed(2)+'" y="18" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#f3f7e9">↔ '+f(gap)+' MM</text>';
+ out+='<line x1="'+mid.toFixed(2)+'" y1="26" x2="'+mid.toFixed(2)+'" y2="41" stroke="#263d32" stroke-width="2"/>';}
+
  out+='<text x="'+(W/2)+'" y="'+(H+13)+'" text-anchor="middle" font-size="11" fill="#253420">ROLLE '+m.width+' MM ↓ VORSCHUB</text></svg>';
  $('#nestpreview').innerHTML=out;$('#nestorientation').textContent=p.rot?'90° ROTIERT':'0° NORMAL';
  $('#nestdetail').textContent=p.across+' NEBENEINANDER × '+p.rows+' REIHEN · '+f(p.len/1000)+' LFM · '+f(bleed)+' MM BESCHNITT/SEITE · '+f(gap)+' MM ZWISCHENSCHNITT';
